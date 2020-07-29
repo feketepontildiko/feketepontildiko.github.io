@@ -1,0 +1,90 @@
+#name {
+    align-content: center;
+
+
+}
+ #loginb button {
+   padding: 10px;
+   margin-top: 10px;
+   color: rgb(30, 144, 210);
+   box-shadow: 0 0 3px 3px rgb(31, 5, 5);
+  
+}
+
+h1 {
+    color: #b42e45;
+
+}
+
+.kocsog input{
+    display:block;
+}
+
+.form-groupinput{
+    display:block;
+}
+
+p label {
+    font-size: 8 px;
+    font-weight: normal;
+}
+
+.test span {
+    font: bold 11px tahoma,arial,helvetica,sans-serif;
+    font-style: normal;
+    font-variant-ligatures: normal;
+    font-variant-caps: normal;
+    font-variant-numeric: normal;
+    font-variant-east-asian: normal;
+    font-weight: bold;
+    font-stretch: normal;
+    font-size: 11px;
+    line-height: normal;
+    font-family: tahoma, arial, helvetica, sans-serif;
+    color: #15428b;
+}
+
+fieldset {
+    border-color: #b5b8c8;
+    border-top-color: rgb(181, 184, 200);
+    border-right-color: rgb(181, 184, 200);
+    border-bottom-color: rgb(181, 184, 200);
+    border-left-color: rgb(181, 184, 200);
+    border-top-color: initial;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-right-color: initial;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-bottom-color: initial;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-left-color: initial;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-image-source: initial;
+    border-image-slice: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
+    display: block;
+    padding: 5px 9px 10px;
+    padding-top: 5px;
+    padding-right: 9px;
+    padding-bottom: 10px;
+    padding-left: 9px;
+}
+
+
+
+
+
+
+.col-1 {
+    background-color: rgb(247, 227, 203);;
+}
+
+#orderButton {
+    align-items: center;
+}
+

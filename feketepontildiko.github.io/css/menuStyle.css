@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap');
+html {
+    
+    background-color: rgb(247, 227, 203);
+    font-family: Roboto;
+    border-color: red;
+    
+}
+
+h4 {
+    
+    font-weight: bold;
+    text-align: center;
+    font-family: Roboto;
+        
+}
+span{
+    margin-bottom: 25px;
+    margin-right: 25px;
+    margin-left: 25;
+    font-style: italic;
+    font-weight: bold;  
+}
+.facebook {
+    font-weight: normal;
+    margin-bottom: 25mm;
+}
+.col-1 {
+    background-color: rgb(247, 227, 203);;
+}

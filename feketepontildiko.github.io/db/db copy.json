@@ -1,0 +1,14 @@
+{
+    "users": [ 
+        { "id":1, "name": "Kis Cica", "e-mail": "cica@cica.hu"},
+        { "id":2, "name": "Kis Kutya", "e-mail": "kutya@cica.hu"},
+        { "id":3, "name": "Kis Paci", "e-mail": "paci@cica.hu"}
+
+    ],
+    "comments" : [ 
+    
+    {"id":1, "body": "love message", "userId":1}
+    ]
+
+
+}

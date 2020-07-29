@@ -1,0 +1,1 @@
+const lodash = requrie("lodash");

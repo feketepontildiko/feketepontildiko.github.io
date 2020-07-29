@@ -1,0 +1,41 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Kis Cica",
+      "e-mail": "cihhhca@cica.hu"
+    },
+    {
+      "id": 2,
+      "name": "Kis Kutya",
+      "e-mail": "kutya@cica.hu"
+    },
+    {
+      "id": 3,
+      "name": "Kis Paci",
+      "e-mail": "paci@cica.hu"
+    },
+    {
+      "name": "j",
+      "email": "kkkk",
+      "id": 4
+    },
+    {
+      "id": 5,
+      "name": "llmm",
+      "e-mail": "nnn"
+    },
+    {
+      "id": 6,
+      "name": "nnn",
+      "e-mail": "jjj"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "love message",
+      "userId": 1
+    }
+  ]
+}
