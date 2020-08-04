@@ -74,10 +74,13 @@ function createAnyElement(name, attributes) {
 
 function createBtnGroup() {
     let group = createAnyElement("div", { class: "btn btn-group" });
-    let infoBtn = createAnyElement("button", { class: "btn btn-info", onclick: "setRow(this)" });
+    let infoBtn = createAnyElement("button", { class: "btn btn-info", onclick: "setRow(this)", click: startGetUsers });
     infoBtn.innerHTML = '<i class="fa fa-refresh aria-hidden="true"></i>';
-    let delBtn = createAnyElement("button", { class: "btn btn-danger", onclick: "delRow(this)" });
+    //document.querySelector(".btn-info").addEventListener("click", startGetUsers);
+    let delBtn = createAnyElement("button", { class: "btn btn-danger", onclick: "delRow(this)",  click: startGetUsers });
     delBtn.innerHTML = '<i class="fa fa-trash aria-hidden="true""></i>';
+    //document.querySelector(".btn-danger").addEventListener("click", startGetUsers);
+    
 
     group.appendChild(infoBtn);
     group.appendChild(delBtn);
@@ -130,10 +133,13 @@ function newUserRow(row) {
         class: "btn btn-success",
         onclick: "createUser(this)"
     });
+    //newBtn.setAttribute("padding", 12);
 
     newBtn.innerHTML = '<i class="fa fa-plus-circle" aria-hidden="true"></i>';
+    let group2 = createAnyElement("div", { class: "btn btn-group" });
     let td = createAnyElement("td");
-    td.appendChild(newBtn);
+    group2.appendChild(newBtn);
+    td.appendChild(group2);
     tr.appendChild(td);
     return tr;
 
@@ -165,6 +171,7 @@ function createUser(btn) {
     ).then(
         data => startGetUsers()
     );
+    startGetUsers();
 
 
 
