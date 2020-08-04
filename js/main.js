@@ -1,4 +1,4 @@
-let keys = ["id", "name", "e-mail"];
+let keys = ["id", "name", "email"];
 //get data from sever
 
 
@@ -48,7 +48,7 @@ function fillDataTable(data, tableID) {
             });
             if (k == "id") {
                 input.setAttribute("readonly", true);
-                //nem mukodik...
+                
 
 
             }
@@ -92,7 +92,6 @@ function delRow(btn) {
     console.log(tr);
     let id = tr.querySelector("td:first-child").firstElementChild.value;
     console.log(id);
-    //ez itt valami szart ad vissza, pedig ugyanzt írtam mint a videóban
     let fetchOptions = {
         method: "DELETE",
         mode: "cors"
@@ -115,7 +114,14 @@ function newUserRow(row) {
         let input = createAnyElement("input", {
             class: "form-control",
             name: k
-        });
+            }
+
+        
+        );
+        if (k == "id") {
+            input.setAttribute("readonly", true);         
+
+        }
         td.appendChild(input);
         tr.appendChild(td);
     }
@@ -136,6 +142,12 @@ function newUserRow(row) {
 function createUser(btn) {
     let tr = btn.parentElement.parentElement;
     let data = getRowData(tr);
+    console.log(data.name);
+    console.log(data.email);
+    if(data.name == "" || data.email==""){
+        alert("Name and E-mail fields can not be empty!");
+        return data;
+    }
     delete data.id;
     let fetchOptions = {
         method: "POST",

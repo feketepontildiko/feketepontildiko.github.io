@@ -3,27 +3,27 @@
     {
       "id": 1,
       "name": "Kis Cica",
-      "e-mail": "cihhhca@cica.hu"
+      "email": "cica@cica.hu"
     },
     {
       "id": 2,
       "name": "Kis Kutya",
-      "e-mail": "kutya@cica.hu"
+      "email": "kutya@cica.hu"
     },
     {
       "id": 3,
       "name": "Kis Paci",
-      "e-mail": "paci@cica.hu"
+      "email": "paci@cica.hu"
     },
     {
-      "name": "j",
-      "email": "kkkk",
+      "name": "mmm",
+      "email": "vvvvv",
       "id": 4
     },
     {
-      "id": 6,
-      "name": "nnn",
-      "e-mail": "jjj"
+      "name": "boci",
+      "email": "bocimail",
+      "id": 5
     }
   ],
   "comments": [
