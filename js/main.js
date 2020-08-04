@@ -47,7 +47,7 @@ function fillDataTable(data, tableID) {
                 name: k
             });
             if (k == "id") {
-                input.setAttribute("readonly", false);
+                input.setAttribute("readonly", true);
                 //nem mukodik...
 
 
@@ -90,7 +90,7 @@ function createBtnGroup() {
 function delRow(btn) {
     let tr = btn.parentElement.parentElement.parentElement;
     console.log(tr);
-    let id = (tr.querySelector("td:first-child")).innerHTML;
+    let id = tr.querySelector("td:first-child").firstElementChild.value;
     console.log(id);
     //ez itt valami szart ad vissza, pedig ugyanzt írtam mint a videóban
     let fetchOptions = {
