@@ -24,6 +24,10 @@ span{
 .facebook {
     font-weight: normal;
     margin-bottom: 25mm;
+    color: blue;
+}
+.neSzivass{
+    font-weight: normal;
 }
 .col-1 {
     background-color: rgb(247, 227, 203);;
