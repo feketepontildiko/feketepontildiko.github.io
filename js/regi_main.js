@@ -51,10 +51,10 @@ function customerDataISValid() {
 function showDegree() {
 
 
-    let daysList = [H, K, Sze, Cs, P, Szo, V];
+    let daysList = ["H", "K", "Sze", "Cs", "P", "Szo", "V"];
     let weeklyDegreeList=  [-10, 0, 10, 20, 30, 7, 15];
 
-    let selected = document.querySelector("select[name='days']");
+    let selected = document.querySelector("select[name='days']").value;
     let match =false;
     let index;
     for(let i=0; i<daysList.length && match==false; i++) {
@@ -65,7 +65,7 @@ function showDegree() {
 
     }
     let showDegree = document.querySelector("span.degree");
-        showDegree.innerHTML = weeklyDegreeList[i];
+        showDegree.innerHTML = weeklyDegreeList[index];
 }
 
 

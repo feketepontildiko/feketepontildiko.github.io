@@ -48,7 +48,7 @@ function fillDataTable(data, tableID) {
             });
             if (k == "id") {
                 input.setAttribute("readonly", true);
-                
+
 
 
             }
@@ -74,19 +74,19 @@ function createAnyElement(name, attributes) {
 
 function createBtnGroup() {
     let group = createAnyElement("div", { class: "btn btn-group" });
-    let infoBtn = createAnyElement("button", { class: "btn btn-info", onclick: "setRow(this)", click: startGetUsers });
+    let infoBtn = createAnyElement("button", { class: "btn btn-info", onclick: "setRow(this)" });
     infoBtn.innerHTML = '<i class="fa fa-refresh aria-hidden="true"></i>';
-    //document.querySelector(".btn-info").addEventListener("click", startGetUsers);
-    let delBtn = createAnyElement("button", { class: "btn btn-danger", onclick: "delRow(this)",  click: startGetUsers });
+    let delBtn = createAnyElement("button", { class: "btn btn-danger", onclick: "delRow(this)" });
     delBtn.innerHTML = '<i class="fa fa-trash aria-hidden="true""></i>';
-    //document.querySelector(".btn-danger").addEventListener("click", startGetUsers);
-    
-
+    //delBtn.addEventListener("click", startGetUsers);
+        
     group.appendChild(infoBtn);
     group.appendChild(delBtn);
 
     let td = createAnyElement("td");
     td.appendChild(group);
+    //document.querySelector(".btn-info").addEventListener("click", startGetUsers);
+    //document.querySelector(".btn-danger").addEventListener("click", startGetUsers);
     return td;
 }
 
@@ -107,6 +107,8 @@ function delRow(btn) {
             startGetUsers();
         }
     );
+     //document.querySelector(".btn-danger").addEventListener("click", startGetUsers);
+     btn.preventDefault();
 }
 
 //create new user
@@ -117,12 +119,12 @@ function newUserRow(row) {
         let input = createAnyElement("input", {
             class: "form-control",
             name: k
-            }
+        }
 
-        
+
         );
         if (k == "id") {
-            input.setAttribute("readonly", true);         
+            input.setAttribute("readonly", true);
 
         }
         td.appendChild(input);
@@ -146,11 +148,11 @@ function newUserRow(row) {
 }
 
 function createUser(btn) {
-    let tr = btn.parentElement.parentElement;
+    let tr = btn.parentElement.parentElement.parentElement;
     let data = getRowData(tr);
     console.log(data.name);
     console.log(data.email);
-    if(data.name == "" || data.email==""){
+    if (data.name == "" || data.email == "") {
         alert("Name and E-mail fields can not be empty!");
         return data;
     }
@@ -189,8 +191,8 @@ function getRowData(tr) {
 function setRow(btn) {
     let tr = btn.parentElement.parentElement.parentElement;
     let data = getRowData(tr);
-    let fetchOptions= {
-        method:"PUT",
+    let fetchOptions = {
+        method: "PUT",
         mode: "cors",
         cache: "no-cache",
         headers: {
@@ -199,8 +201,8 @@ function setRow(btn) {
         body: JSON.stringify(data)
     };
 
-    fetch(`http://localhost:3000/users/${data.id}`, fetchOptions).then (
-        resp =>resp.json(),
+    fetch(`http://localhost:3000/users/${data.id}`, fetchOptions).then(
+        resp => resp.json(),
         err => console.error(err)
     ).then(
         data => startGetUsers()
