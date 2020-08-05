@@ -1,0 +1,13 @@
+\.vscode
+\css\menuStyle.css
+\css\orderStyle.css
+\css\style.css
+\db\db.json
+html\adminpage.html
+html\mainMenu.html
+html\menu.html
+html\order.html
+images\p1.jpg
+js\main.js
+js\regi_main.js
+node_modules
