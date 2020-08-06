@@ -1,26 +1,4 @@
 {
-  "users": [
-    {
-      "id": 1,
-      "name": "Kis Cica",
-      "email": "cica@cica.hu"
-    },
-    {
-      "id": 2,
-      "name": "Kis Kutya",
-      "email": "kutya@cica.hu"
-    },
-    {
-      "id": 3,
-      "name": "Kis Paci",
-      "email": "paci@cica.hu"
-    }
-  ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "love message",
-      "userId": 1
-    }
-  ]
+  "users": [],
+  "comments": []
 }

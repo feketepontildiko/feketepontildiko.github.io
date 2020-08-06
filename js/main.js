@@ -76,10 +76,9 @@ function createBtnGroup() {
     let group = createAnyElement("div", { class: "btn btn-group" });
     let infoBtn = createAnyElement("button", { class: "btn btn-info", onclick: "setRow(this)" });
     infoBtn.innerHTML = '<i class="fa fa-refresh aria-hidden="true"></i>';
-    let delBtn = createAnyElement("button", { class: "btn btn-danger", onclick: "delRow(this)" });
+    let delBtn = createAnyElement("button", { class: "btn btn-danger" });
     delBtn.innerHTML = '<i class="fa fa-trash aria-hidden="true""></i>';
-    //delBtn.addEventListener("click", startGetUsers);
-        
+    delBtn.addEventListener("click", delRow);
     group.appendChild(infoBtn);
     group.appendChild(delBtn);
 
@@ -90,7 +89,8 @@ function createBtnGroup() {
     return td;
 }
 
-function delRow(btn) {
+function delRow(event) {
+    let btn = event.currentTarget;
     let tr = btn.parentElement.parentElement.parentElement;
     console.log(tr);
     let id = tr.querySelector("td:first-child").firstElementChild.value;
@@ -103,12 +103,12 @@ function delRow(btn) {
         resp => resp.json(),
         err => console.error(err)
     ).then(
-        data => {
+        () => {
             startGetUsers();
         }
     );
-     //document.querySelector(".btn-danger").addEventListener("click", startGetUsers);
-     btn.preventDefault();
+    // document.querySelector(".btn-danger").addEventListener("click", startGetUsers);
+    // event.preventDefault();
 }
 
 //create new user
