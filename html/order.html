@@ -26,11 +26,11 @@
             <div class="col-1"></div>
             <div class="col-10">
                 <div>
-                    <div >
+                    <div>
                         <form class="gift">
                             <label for="days">Choose a day:</label>
 
-                            <select id="days" name="days"  size=”7”>
+                            <select id="days" name="days" size=”7”>
                                 <option value="H">H</option>
                                 <option value="K">K</option>
                                 <option value="Sze">Sze</option>
@@ -59,24 +59,35 @@
 
 
                     <form>
-                        <div class="form-group row">
-                            <label for="inputEmail3" class="col-sm-2 col-form-label">Name</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" name="name">
+                        <fieldset class="form-group border p-2">
+                            <legend class="w-auto">Customer data</legend>
+
+                            <div class="form-group row">
+                                <label for="inputEmail3" class="col-sm-2 col-form-label">Name</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" name="name">
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="inputPassword3" class="col-sm-2 col-form-label">Address</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" name="address">
+                            <div class="form-group row">
+                                <label for="inputPassword3" class="col-sm-2 col-form-label">Address</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" name="address">
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="inputPassword3" class="col-sm-2 col-form-label">Telephone number</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" name="phone">
+                            <div class="form-group row">
+                                <label for="inputPassword3" class="col-sm-2 col-form-label">Telephone number</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" name="phone">
+                                </div>
                             </div>
-                        </div>
+                        </fieldset>
+                    </form>
+
+
+
+                    <fieldset class="form-group border p-2">
+                        <legend class="w-auto">Order</legend>
+
 
                         <div class="form-group row">
                             <label for="mn" class="col-sm-2 col-form-label">Volume</label>
@@ -97,7 +108,7 @@
 
 
 
-                        <fieldset class="form-group">
+                        
                             <div class="row">
                                 <legend class="col-form-label col-sm-2 pt-0">Extras</legend>
                                 <div class="col-sm-10">
@@ -124,28 +135,30 @@
                                     </div>
                                 </div>
                             </div>
-                        </fieldset>
 
 
 
-                        <div class="form-group row">
-                            <div class="col-sm-2">Use cupons</div>
-                            <div class="col-sm-10">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="gridCheck1">
-                                    <label class="form-check-label" for="gridCheck1">
 
-                                    </label>
+                            <div class="form-group row">
+                                <div class="col-sm-2">Use cupons</div>
+                                <div class="col-sm-10">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="gridCheck1">
+                                        <label class="form-check-label" for="gridCheck1">
+
+                                        </label>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </fieldset>
+
                         <div class="form-group row">
                             <div class="col-12">
                                 <button onclick="customerDataISValid()" id="orderButton" type="button"
                                     class="btn btn-block btn-primary">Order</button>
                             </div>
                         </div>
-                    </form>
+                        </form>
 
 
                 </div>

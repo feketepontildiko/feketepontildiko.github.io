@@ -74,6 +74,10 @@ fieldset {
     padding-bottom: 10px;
     padding-left: 9px;
 }
+.w-auto {
+    font-size: 14px;
+    font-weight: blighter;
+}
 
 
 
